@@ -1,7 +1,3 @@
 #!/usr/bin/make -f
-export git_protocol=https
 %:
 	dh $@
-
-override_dh_auto_clean:
-	dh_auto_clean

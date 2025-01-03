@@ -1,7 +1,7 @@
 Source: samplesite
 Maintainer: Kishore Selvaraj <kihsoreselvaraj19@proton.me>
 Version: 1.0
-Build-Depends: debhelper (>= 8)
+Build-Depends: debhelper-compat (= 13)
 Standards-Version: 3.9.5
 Priority: optional
 
