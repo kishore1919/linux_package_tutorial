@@ -1,7 +1,7 @@
-app usr/share/samplewebapp
-samplesite usr/share/samplewebapp
-db.sqlite3 usr/share/samplewebapp
-manage.py usr/share/samplewebapp
-README.md usr/share/samplewebapp
-requirements.txt usr/share/samplewebapp
-samplewebapp.service /etc/systemd/system/
+app usr/share/samplesite
+samplesite usr/share/samplesite
+db.sqlite3 usr/share/samplesite
+manage.py usr/share/samplesite
+README.md usr/share/samplesite
+requirements.txt usr/share/samplesite
+samplesite.service /etc/systemd/system/

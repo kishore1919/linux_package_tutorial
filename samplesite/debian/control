@@ -1,9 +1,12 @@
 Source: samplesite
 Maintainer: Kishore Selvaraj <kihsoreselvaraj19@proton.me>
 Version: 1.0
-Essential: no
+Build-Depends: debhelper (>= 8)
+Standards-Version: 3.9.5
 Priority: optional
-Package: samplewebapp
+
+Package: samplesite
 Architecture: all
 Depends: ${misc:Depends}, gunicorn, django
 Description: This package contains a sample site built with Django and served using Gunicorn.
+ This is a simple Django application, served via Gunicorn, packaged into a Debian package.

@@ -12,7 +12,7 @@ This guide will demonstrate how to package a sample Django web application (_sam
 
 ### Package Structure
 
-The package, named `samplewebapp_1.0_all`, will install and serve a Django application using Gunicorn. The folder structure for the package is as follows:
+The package, named `samplesite_1.0_all`, will install and serve a Django application using Gunicorn. The folder structure for the package is as follows:
 
 ```plaintext
 .
@@ -21,7 +21,7 @@ The package, named `samplewebapp_1.0_all`, will install and serve a Django appli
 │   ├── postinst               # Script executed after installation
 │   ├── preinst                # Script executed before installation
 │   ├── rules                  # Build instructions
-│   └── samplewebapp.service   # Systemd service configuration
+│   └── samplesite.service   # Systemd service configuration
 ├── samplesite                 # Django project folder
 │   ├── app                    # Django application
 │   ├── manage.py              # Django management script
@@ -36,7 +36,7 @@ The package, named `samplewebapp_1.0_all`, will install and serve a Django appli
 The `control` file contains metadata about the package:
 
 ```conf
-Package: samplewebapp
+Package: samplesite
 Version: 1.0
 Architecture: all
 Essential: no
@@ -68,7 +68,7 @@ BIND=0.0.0.0:8080
 
 1. Install the package using `dpkg`:
    ```bash
-   sudo dpkg -i ../samplewebapp_1.0_all.deb
+   sudo dpkg -i ../samplesite_1.0_all.deb
    ```
 
 2. If dependencies are missing, install them using:
@@ -78,7 +78,7 @@ BIND=0.0.0.0:8080
 
 3. To uninstall the package:
    ```bash
-   sudo apt autoremove samplewebapp
+   sudo apt autoremove samplesite
    ```
 
 ## Deploying the Application without .deb
@@ -93,13 +93,13 @@ BIND=0.0.0.0:8080
 2. Start the application using systemd:
    ```bash
    sudo systemctl daemon-reload
-   sudo systemctl enable samplewebapp.service
-   sudo systemctl start samplewebapp.service
+   sudo systemctl enable samplesite.service
+   sudo systemctl start samplesite.service
    ```
 
 3. Check the status of the service:
    ```bash
-   sudo systemctl status samplewebapp.service
+   sudo systemctl status samplesite.service
    ```
 
 ## Accessing the Application
@@ -112,7 +112,7 @@ Visit the following URL in your browser to access the application:
 1. Create a folder for the repository:
    ```bash
    mkdir -p /path/to/mirror/pool
-   cp ../samplewebapp_1.0_all.deb /path/to/mirror/pool/
+   cp ../samplesite_1.0_all.deb /path/to/mirror/pool/
    ```
 
 2. Create a `Packages` index:
@@ -123,13 +123,13 @@ Visit the following URL in your browser to access the application:
 
 3. Add the repository to your sources list:
    ```bash
-   echo "deb [trusted=yes] file:/path/to/mirror /" | sudo tee /etc/apt/sources.list.d/samplewebapp.list
+   echo "deb [trusted=yes] file:/path/to/mirror /" | sudo tee /etc/apt/sources.list.d/samplesite.list
    ```
 
 4. Update your package list and install:
    ```bash
    sudo apt update
-   sudo apt install samplewebapp
+   sudo apt install samplesite
    ```
 
 ## Notes on APT vs Snap

@@ -1,12 +1,12 @@
 #!/bin/bash 
 
-pip install -r /usr/share/samplewebapp/requirements.txt
+pip install -r /usr/share/samplesite/requirements.txt
 
-if [ -f /etc/systemd/system/samplewebapp.service ]; then
+if [ -f /etc/systemd/system/samplesite.service ]; then
     # Reload systemd and enable the service
     sudo systemctl daemon-reload
-    sudo systemctl enable samplewebapp.service
-    sudo systemctl start samplewebapp.service
+    sudo systemctl enable samplesite.service
+    sudo systemctl start samplesite.service
 fi
 
 

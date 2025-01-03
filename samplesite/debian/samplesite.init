@@ -1,6 +1,6 @@
 #! /bin/bash
 
-APPNAME=samplewebapp
+APPNAME=samplesite
 PATH=/bin:/usr/bin:/sbin:/usr/sbin
 APPMODULE=samplesite.wsgi
 DAEMON=gunicorn
@@ -18,7 +18,7 @@ then
     . /etc/default/$APPNAME
 fi
 
-cd /usr/share/samplewebapp
+cd /usr/share/samplesite
 
 case "$1" in
   start)
