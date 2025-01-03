@@ -46,6 +46,11 @@ Maintainer: Your Name <your.email@example.com>
 Description: A sample Django web application packaged as a Debian package.
 ```
 
+###  if you want to change the port please do it on samplesize.init
+```
+BIND=0.0.0.0:8080
+```
+
 ## Building the Debian Package
 
 1. Navigate to the package directory:
