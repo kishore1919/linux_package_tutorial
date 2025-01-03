@@ -1,0 +1,11 @@
+[Unit]
+Description= samplewebapp - The main samplewebapp process
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/usr/share/samplewebapp
+ExecStart=/usr/bin/gunicorn --bind=0.0.0.0:22200 --workers=4 samplewebapp.wsgi --time 3600
+
+[Install]
+WantedBy=multi-user.target

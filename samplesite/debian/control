@@ -1,0 +1,9 @@
+Source: samplesite
+Maintainer: Kishore Selvaraj <kihsoreselvaraj19@proton.me>
+Version: 1.0
+Essential: no
+Priority: optional
+Package: samplewebapp
+Architecture: all
+Depends: ${misc:Depends}, gunicorn, django (>= 5.1)
+Description: This package contains a sample site built with Django and served using Gunicorn.

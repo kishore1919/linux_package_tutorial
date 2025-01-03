@@ -1,0 +1,11 @@
+#!/bin/bash 
+
+if [ -f /etc/systemd/system/samplewebapp.service ]; then
+    # Reload systemd and enable the service
+    sudo systemctl daemon-reload
+    sudo systemctl enable samplewebapp.service
+    sudo systemctl start samplewebapp.service
+fi
+
+
+exit 0

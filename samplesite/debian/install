@@ -1,0 +1,6 @@
+app usr/share/samplewebapp
+samplesite usr/share/samplewebapp
+db.sqlite3 usr/share/samplewebapp
+manage.py usr/share/samplewebapp
+README.md usr/share/samplewebapp
+samplewebapp.service /etc/systemd/system/
