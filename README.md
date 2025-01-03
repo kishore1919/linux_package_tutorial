@@ -139,5 +139,5 @@ Visit the following URL in your browser to access the application:
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the Apache 2.0
 
